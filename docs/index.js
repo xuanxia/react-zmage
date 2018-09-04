@@ -130,16 +130,19 @@ export default class ReactZmage extends React.Component {
                             className={style.image}
                             src="imgSet/aboutDeer/3.jpg"
                             alt="展示序列图片"
-                            set={[{
-                                src: "imgSet/aboutDeer/3.jpg",
-                                alt: "關於鹿 · THREE"
-                            },{
-                                src: "imgSet/aboutDeer/4.jpg",
-                                alt: "關於鹿 · FOUR"
-                            },{
-                                src: "imgSet/aboutDeer/5.jpg",
-                                alt: "關於鹿 · FIVE"
-                            }]}
+                            set={(callBack)=>{
+                                const list = [{
+                                    src: "imgSet/aboutDeer/3.jpg",
+                                    alt: "關於鹿 · THREE"
+                                },{
+                                    src: "imgSet/aboutDeer/4.jpg",
+                                    alt: "關於鹿 · FOUR"
+                                },{
+                                    src: "imgSet/aboutDeer/5.jpg",
+                                    alt: "關於鹿 · FIVE"
+                                }];
+                                callBack(list);
+                            }}
                         />
                         <a href="https://www.behance.net/gallery/58036101/_">via. sslololss Guihuahuzi on behance</a>
                     </div>
@@ -158,16 +161,19 @@ export default class ReactZmage extends React.Component {
                             className={style.image}
                             src="imgSet/aboutDeer/6.jpg"
                             alt="使用键盘进行快捷操作"
-                            set={[{
-	                            src: "imgSet/aboutDeer/6.jpg",
-	                            alt: "關於鹿 · SIX"
-                            },{
-	                            src: "imgSet/aboutDeer/7.jpg",
-	                            alt: "關於鹿 · SEVEN"
-                            },{
-	                            src: "imgSet/aboutDeer/8.jpg",
-	                            alt: "關於鹿 · EIGHT"
-                            }]}
+                            set={(callBack)=>{
+                                const list = [{
+                                    src: "imgSet/aboutDeer/3.jpg",
+                                    alt: "關於鹿 · THREE"
+                                },{
+                                    src: "imgSet/aboutDeer/4.jpg",
+                                    alt: "關於鹿 · FOUR"
+                                },{
+                                    src: "imgSet/aboutDeer/5.jpg",
+                                    alt: "關於鹿 · FIVE"
+                                }];
+                                callBack(list);
+                            }}
                         />
                         <a href="https://www.behance.net/gallery/58036101/_">via. sslololss Guihuahuzi on behance</a>
                     </div>

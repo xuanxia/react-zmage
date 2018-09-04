@@ -118,13 +118,27 @@ export default class Wrapper extends React.PureComponent {
     }
     handleSwitchPages = (direction) => {
         return () => {
-            const { set } = this.props
-            const { page } = this.state
-            this.setState({
-                page: direction === "prev" ?
-                    Math.abs(set.length + page - 1) % set.length:
-                    (page + 1) % set.length
-            })
+            const { page } = this.state;
+            const { set } = this.props;
+
+            let list = [];
+            if(typeof set === 'function'){
+               set((list)=>{
+                   this.setState({
+                       page: direction === "prev" ?
+                           Math.abs(list.length + page - 1) % list.length:
+                           (page + 1) % list.length,
+                   })
+               })
+            }else{
+                list = set;
+                this.setState({
+                    page: direction === "prev" ?
+                        Math.abs(list.length + page - 1) % list.length:
+                        (page + 1) % list.length,
+                })
+            }
+
         }
     }
 
@@ -204,7 +218,7 @@ Wrapper.propTypes = {
 	// 封面节点
     cover: PropTypes.object,
 	// 图片列表
-    set: defType.set,
+    // set: defType.set,
 	// 控制器
 	controller: defType.controller,
 	// 快捷键
