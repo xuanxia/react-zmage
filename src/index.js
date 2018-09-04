@@ -127,7 +127,7 @@ ReactZmage.propTypes = {
     txt: PropTypes.string,
 
     // 图片集合, 可以传入单独的图片类型或数组包裹的图片类型
-    set: defType.set,
+    //  set: defType.set,
 
     // 控制器
     controller: defType.controller,
